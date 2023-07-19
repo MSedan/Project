@@ -1,0 +1,125 @@
+body {
+    background-color: #b9b0b2;
+    color: #286fb4;
+    font-family: "DM Sans", sans-serif;
+  }
+  
+  /* Navigation bar*/
+  /* OPTION 2: nav { background-color: #929AA2;} */
+  
+  .nav-link {
+    font-size: 20px;
+    color: #B7673C;
+  }
+  .nav-link:hover {
+    color: #B7673C;
+  }
+  
+  #navimg {
+    position: relative;
+    left: 5px;
+    top: 10px;
+  }
+  #navimg:hover {
+    cursor: pointer;
+  }
+  
+  .nav-item:hover {
+    background-color: #929aa2;
+    color: #B7673C;
+  }
+  
+  /* Cards */
+  
+  .turn {
+    position: relative;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+  }
+  
+  .first {
+    display: inline-block;
+    margin: 5px;
+    perspective: 1000px;
+  }
+  
+  .first:hover .turn {
+    transform: rotateY(180deg);
+  }
+  
+  /* Faces */
+  .front,
+  .back {
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    background-color: #3a5154;
+    text-align: center;
+  }
+  
+  .back {
+    box-sizing: border-box;
+    transform: rotateY(180deg);
+    position: relative;
+    padding: 0px;
+  }
+  
+  #cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px;
+    background-color: #3a5154;
+  }
+  
+  hr {
+    color: #3a5154;
+    border: 1px solid;
+    margin-left: 0%;
+    margin-right: 0%;
+    box-shadow: 10px 1000px 100px #929aa2;
+  }
+  
+  .rightside {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 1px;
+  }
+  
+  .textbox {
+    padding: 100px;
+  }
+  p {
+    padding: 50px;
+  }
+  .textpic {
+    height: 500px;
+    width: 2000px;
+  }
+  
+  /* Button*/
+  button {
+    padding: 32px 16px;
+    background: linear-gradient(180deg, #929aa2, #3a5154);
+    border: 2px solid #3a5154;
+  }
+  
+  button:hover {
+    background: linear-gradient(45deg, #929aa2, #3a5154);
+  }
+  
+  footer {
+    background: #929aa2;
+    padding: 50px;
+    color: #B7673C;
+  }
+  
