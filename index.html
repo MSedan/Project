@@ -24,19 +24,18 @@
           <img id="navimg" src="https://cdn-icons-png.flaticon.com/512/4224/4224739.png" height="30px" width="30px" alt="Driving Duck" onClick="window.location.reload()">
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./duckpage2.html"><strong>Duck pictures</strong></a>
+          <a class="nav-link" style="color: #3A5154" href="https://codepen.io/MSedan/pen/zYMPEyx"><strong>Duck pictures</strong></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><strong>Something will be here</strong></a>
+          <a class="nav-link" style="color: #3A5154" href="#FbArea"><strong>Go to feedback form</strong></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://codepen.io/MSedan/full/LYXNmKY"><strong>Codepen</strong></a>
+          <a class="nav-link" style="color: #3A5154" href="https://codepen.io/MSedan/full/LYXNmKY"><strong>Codepen</strong></a>
         </li>
       </ul>
 
     </nav>
   </header>
-
   <!-- 3 turning cards with pictures-->
   <div id="cards">
     <figure class="first">
@@ -44,7 +43,6 @@
         <!-- Front -->
         <div class="front">
           <h3>Ducks</h3>
-          <p> Check me out</p>
         </div>
         <!-- Back -->
         <div class="back">
@@ -83,7 +81,7 @@
     <hr>
     <div class="rightside">
       <div>
-        <h3>Habitat</h3>
+        <h2>Habitat</h2>
         <p> In the UK, duck nests have been found in many places! Females will look for a new habitat, or place to live, that's covered in vegetation and plants, so that they can protect and hide their ducklings. Males will look for a place where there is lots of food.
         </p>
       </div>
@@ -95,61 +93,48 @@
   </div>
 
   <!-- Progress bar with a currency button and toast prompt?-->
-  <button type="button" class="liveToastBtn" data-toggle="tooltip" data-placement="top" title="Click here to earn Duck Currency">
-    Wants to be duck currency in the future
-  </button>
-  <ol>
-    <li>B7673C - Orange </li>
-    <li> 3A5154 - Dark Green </li>
-    <li> B9B0B2 - Grey </li>
-    <li> 929AA2 - Dark grey </li>
-    <li>1D2625 - white </li>
-  </ol>
-  </p>
-  <!-- Something in the footer-->
-  <div class="textbox">
-    <hr>
-    <div class="rightside">
-      <div>
-        <article>
-          <h2>Types of ducks</h2>
-          <p>There are lots of different species of duck, but here are just a few:
-          </p>
-          <ul>
-            <li><strong>Mallard</strong> - The most common duck found in the UK is the mallard duck. The males have green
-              coloured heads with yellow bills, while the females have brown colouring all over. They are found all over the
-              world, including the Americas, North Africa, South Africa, New Zealand and Australia.</li>
-            <li><strong>Muscovy</strong> - The Muscovy duck has a striking red face with black and white feathers. They are
-              native to Mexico and Central and South America.</li>
-            <li><strong>Domestic</strong> - Most domestic ducks descend from the mallard duck, but some are descended from
-              the Muscovy duck. They are raised as pets or for their eggs and down.</li>
-          </ul>
-        </article>
-      </div>
-      <div class="textpic">
-        <img src="https://images.unsplash.com/photo-1670831215518-87c6c46c250d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHJpdmVyJTIwZHVja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Duck in snow">
+    <div id="posit">
+      <progress value="0" max="50" id="p1"> 0% </progress>
+  
+      <button type="button" id="currency" onClick="move(); Name()">Click me!</button>
+    </div>
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+      <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Congratulations, you moved the progress bar by <span id="toastText"></span>!</strong>
+          <small>Just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+        </div>
       </div>
     </div>
-    <hr>
-  </div>
+    <div class="textbox">
+      <hr>
+      <div class="rightside">
+        <div>
+          <h2>Types of ducks</h2>
+          <ul>
+            </li>
+            <li><strong>Mallard</strong> - The most common duck found in the UK is the mallard duck. The males have green coloured heads with yellow bills, while the females have brown colouring all over. They are found all over the world, including the Americas, North Africa, South Africa, New Zealand and Australia.</li>
+            <li><strong>Muscovy</strong> - The Muscovy duck has a striking red face with black and white feathers. They are native to Mexico and Central and South America.</li>
+            <li><strong>Domestic</strong> - Most domestic ducks descend from the mallard duck, but some are descended from the Muscovy duck. They are raised as pets or for their eggs and down.</li>
+          </ul>
+        </div>
+        <div class="textpic">
+          <img src="https://images.unsplash.com/photo-1670831215518-87c6c46c250d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHJpdmVyJTIwZHVja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Duck in snow">
+        </div>
+      </div>
+      <hr>
+    </div>
   <!-- Feedback form in the footer-->
   <footer>
-
-    <h1>Feedback form</h1>
-    <form onsubmit="return false">
-    </form>
-    <input type="text" placeholder="What could be better?" id="lastName" />
-    <br><br>
-    <span>What is your question?</span>
-    <br>
-    <textarea id="feedback" rows="2" placeholder="What could be better?"></textarea>
-    <button onclick="sendContact();">Send contact</button>
-    <br><br>
-    <form action="index.php">
-      Enter your name: <input type="text" name="your_name" minlength="2" maxlength="60">
-    </form>
+    <h1 id="FbArea">Feedback form</h1>
+    <label>Let me know what you think: </label>
+    <input type="text" id="myfeedback" placeholder="Type your feedback!">
+    <button type="button" id="feedbackbtn">Submit</button>
   </footer>
+  <script src="Javascript.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  <script src="index.js"></script>
 </body>
 </html>
